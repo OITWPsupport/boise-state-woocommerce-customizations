@@ -1,4 +1,4 @@
-# Boise State Woocommerce Customizations
+# Boise State WooCommerce Customizations
 Applies fixes and customizations to Boise State sites using Woocommerce with the Storefront theme:
 1. Hides some product information that's not useful in our implementations. 
 1. Hides the form used to sort the catalog display. 
