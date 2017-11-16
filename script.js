@@ -10,24 +10,26 @@ jQuery(document).ready(function() {
 
 	// We're going to hide the .woocommerce-ordering form (which lets us sort catalog items).
 	// Still, we'll get wcag errors if we don't fix stuff on that form's elements
-	jQuery('.woocommerce-ordering').append('<input type="submit" id="order-submit" value="Submit">');
+	jQuery('.woocommerce-ordering').append('<input type="submit" value="Submit">');
 	jQuery('.orderby').attr('title', 'orderby');
 	// Hide the form:
 	jQuery('.woocommerce-ordering').hide();
 
 	jQuery('.sku_wrapper').hide();
 	jQuery('.tagged_as').hide();
-	jQuery('.page-numbers').attr('color', '#757575');
-	jQuery('.page-numbers.current').attr('color', '#676767');
-	jQuery('.skip-link').attr('color', '#feffff');
+	jQuery('.page-numbers').css('color', '#757575');
+	jQuery('.page-numbers.current').css('color', '#676767');
+	jQuery('.skip-link').css('color', '#fff');
 
 	jQuery('body').css('font-family', '"Helvetica Neue", sans-serif');
+	jQuery('.add_to_cart_button').css('font-family', '"Helvetica Neue", sans-serif');
+	jQuery('.single_add_to_cart_button').css('font-family', '"Helvetica Neue", sans-serif');
 	jQuery('.product_title').css('font-family', '"Montserrat", sans-serif');
 	jQuery('.related').css('font-family', '"Montserrat", sans-serif');
 	jQuery('.woocommerce-products-header__title').css('font-family', '"Montserrat", sans-serif');
 
-	jQuery('.site-header').attr('background-color', '#043477');
-	jQuery('.add_to_cart_button').attr('background-color', '#0169a4');
+	jQuery('.site-header').css('background-color', '#043477');
+	jQuery('.add_to_cart_button').css('background-color', '#0169a4');
 
 	// To hide a product's price from the product info page:
 	jQuery('.woocommerce-Price-amount').hide();

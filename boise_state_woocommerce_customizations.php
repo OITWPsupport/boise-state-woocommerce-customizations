@@ -3,7 +3,7 @@
  * Plugin Name: Boise State Woocommerce Customizations
  * Plugin URI: https://github.com/OITWPsupport/boise-state-woocommerce-customizations
  * Description: Provides customizations and a11y fixes for sites using Woocommerce and the Storefront theme. 
- * Version: 0.0.1
+ * Version: 0.1.0
  * Author: Kira Davis and David Lentz
  */
 
@@ -29,7 +29,7 @@ function woo_custom_product_searchform( $form ) {
 	$form = '<form role="search" method="get" class="woocommerce-product-search" action="' . esc_url( home_url( '/'  ) ) . '">
 		<div>
 			<label class="screen-reader-text" for="s">' . __( 'Search for:', 'woocommerce' ) . '</label>
-			<input type="text" value="' . get_search_query() . '" name="s" placeholder="' . get_option('search_text') . '" />
+			<input type="text" value="' . get_search_query() . '" name="s" title="' . get_option('search_text') . '" placeholder="' . get_option('search_text') . '" />
 			<input type="submit" value="'. esc_attr__( 'Search', 'woocommerce' ) .'" />
 			<input type="hidden" name="post_type" value="product" />
 		</div>
@@ -56,8 +56,8 @@ function woocommerce_filter( $defaults ) {
 add_action('admin_menu', 'bsu_breadcrumb_admin_settings');
 
 function bsu_breadcrumb_admin_settings() {
-    $page_title = 'Breadcrumbs';
-    $menu_title = 'Breadcrumb Settings';
+    $page_title = 'Boise State WooCommerce Customizations';
+    $menu_title = 'Boise State WooCommerce Customizations';
     $capability = 'edit_posts';
     $menu_slug = 'bsu_breadcrumb_options';
     $function = 'bsu_breadcrumb_admin_settings_page_display';
