@@ -21,10 +21,13 @@ jQuery(document).ready(function() {
 	jQuery('.page-numbers.current').attr('color', '#676767');
 	jQuery('.skip-link').attr('color', '#feffff');
 
-	jQuery('body').attr('font-family', '"Helvetica Neue", sans-serif');
-	jQuery('.product_title').attr('font-family', '"Montserrat", sans-serif');
-	jQuery('.related').attr('font-family', '"Montserrat", sans-serif');
-	jQuery('.woocommerce-products-header__title').attr('font-family', '"Montserrat", sans-serif');
+	jQuery('body').css('font-family', '"Helvetica Neue", sans-serif');
+	jQuery('.product_title').css('font-family', '"Montserrat", sans-serif');
+	jQuery('.related').css('font-family', '"Montserrat", sans-serif');
+	jQuery('.woocommerce-products-header__title').css('font-family', '"Montserrat", sans-serif');
+
+	jQuery('.site-header').attr('background-color', '#043477');
+	jQuery('.add_to_cart_button').attr('background-color', '#0169a4');
 
 	// To hide a product's price from the product info page:
 	jQuery('.woocommerce-Price-amount').hide();
